@@ -50,6 +50,8 @@ gem "bootsnap", require: false
 
 gem 'streamio-ffmpeg'
 
+gem 'activestorage'
+
 gem 'hashid-rails'
 
 group :development, :test do
