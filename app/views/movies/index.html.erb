@@ -1,0 +1,6 @@
+<h1>動画一覧</h1>
+<% @movies.each do |movie| %>
+  <p>タイトル</p> 
+  <span><%= movie.title %></span> 
+  <span><%= link_to "動画を観る", movie_path(movie.hashid) %><span>
+<% end %>

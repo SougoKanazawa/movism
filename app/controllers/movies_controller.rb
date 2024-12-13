@@ -1,4 +1,8 @@
 class MoviesController < ApplicationController
+  def index
+    @movies = Movie.all
+  end
+  
   def new
     @movie = Movie.new
   end
@@ -8,6 +12,10 @@ class MoviesController < ApplicationController
     @movie.save!
 
     redirect_to new_movie_path
+  end
+
+  def show
+    @movie = Movie.find_by_hashid!(params[:id])
   end
 
   private
